@@ -18,7 +18,7 @@ import (
 var (
 	fileList	= flag.String("list", "", "a file contain the files you want statistic")
 	help		= flag.Bool("help", false, "show usage")
-	commentR	= regexp.MustCompile(`(?:^//.*)|(?:/\*.*$)`)
+	commentR	= regexp.MustCompile(`(?:^//.*)|(?:^/\*.*)|(?:.*\*/$)`)
 )
 
 const (
